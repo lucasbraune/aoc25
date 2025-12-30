@@ -1,0 +1,6 @@
+[submodule "day1/vcpkg"]
+	path = day1/vcpkg
+	url = https://github.com/microsoft/vcpkg.git
+[submodule "day2/vcpkg"]
+	path = day2/vcpkg
+	url = https://github.com/microsoft/vcpkg.git

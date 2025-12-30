@@ -1,0 +1,9 @@
+build
+
+# clangd (language server) cache 
+.cache
+# CTest temporary files
+Testing
+
+vcpkg_installed
+

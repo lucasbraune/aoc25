@@ -1,0 +1,144 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:5 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/opt/homebrew/opt/sqlite/bin/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Applications/IntelliJ IDEA CE.app/Contents/MacOS/"
+      - "/Users/lucasbraune/.rbenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Applications/iTerm.app/Contents/Resources/utilities/"
+    searched_directories:
+      - "/opt/homebrew/opt/sqlite/bin/uname"
+      - "/usr/local/opt/ruby/bin/uname"
+      - "/usr/local/opt/coreutils/libexec/gnubin/uname"
+      - "/Applications/IntelliJ IDEA CE.app/Contents/MacOS/uname"
+      - "/Users/lucasbraune/.rbenv/shims/uname"
+      - "/opt/homebrew/bin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/sqlite/bin"
+        - "/usr/local/opt/ruby/bin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
+        - "/Users/lucasbraune/.rbenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Applications/iTerm.app/Contents/Resources/utilities"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "vcpkg/scripts/buildsystems/vcpkg.cmake:309 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:5 (project)"
+    mode: "program"
+    variable: "Z_VCPKG_CL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cl"
+    candidate_directories:
+      - "/opt/homebrew/opt/sqlite/bin/"
+      - "/usr/local/opt/ruby/bin/"
+      - "/usr/local/opt/coreutils/libexec/gnubin/"
+      - "/Applications/IntelliJ IDEA CE.app/Contents/MacOS/"
+      - "/Users/lucasbraune/.rbenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Applications/iTerm.app/Contents/Resources/utilities/"
+    searched_directories:
+      - "/opt/homebrew/opt/sqlite/bin/cl"
+      - "/usr/local/opt/ruby/bin/cl"
+      - "/usr/local/opt/coreutils/libexec/gnubin/cl"
+      - "/Applications/IntelliJ IDEA CE.app/Contents/MacOS/cl"
+      - "/Users/lucasbraune/.rbenv/shims/cl"
+      - "/opt/homebrew/bin/cl"
+      - "/opt/homebrew/sbin/cl"
+      - "/usr/local/bin/cl"
+      - "/System/Cryptexes/App/usr/bin/cl"
+      - "/usr/bin/cl"
+      - "/bin/cl"
+      - "/usr/sbin/cl"
+      - "/sbin/cl"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/cl"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/cl"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/cl"
+      - "/Applications/iTerm.app/Contents/Resources/utilities/cl"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/sqlite/bin"
+        - "/usr/local/opt/ruby/bin"
+        - "/usr/local/opt/coreutils/libexec/gnubin"
+        - "/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
+        - "/Users/lucasbraune/.rbenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Applications/iTerm.app/Contents/Resources/utilities"
