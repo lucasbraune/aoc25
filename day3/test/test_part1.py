@@ -1,11 +1,7 @@
 import pytest
 
+import lib
 import part1
-
-
-def test_argmax():
-    arr = [1, 3, 2]
-    assert part1.argmax(arr) == 1
 
 
 @pytest.mark.parametrize(
@@ -17,11 +13,11 @@ def test_argmax():
         ("818181911112111", 92),
     ],
 )
-def test_jolage(bank: str, expected: int):
-    assert part1.joltage(bank) == expected
+def test_joltage_with_2_batteries(bank: str, expected: int):
+    assert lib.joltage(bank, batteries=2) == expected
 
 
-def test_total_output():
+def test_total_output_with_2_batteries():
     banks = """
     987654321111111
     811111111111119
@@ -29,7 +25,7 @@ def test_total_output():
     818181911112111
     """
     print(banks)
-    assert part1.total_output(banks) == 357
+    assert lib.total_output(banks, batteries=2) == 357
 
 
 def test_solve():
