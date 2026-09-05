@@ -21,8 +21,11 @@ std::ostream& operator<<(std::ostream& os, const Range& r);
 std::istream& operator>>(std::istream& is, Range& range);
 std::istream& operator>>(std::istream& is, std::vector<Range>& ranges);
 
-int64_t add_valid_ids(Range r);
+int64_t add_invalid_ids(Range r);
 int64_t leading_digits(int64_t n);
+int64_t make_pt2_invalid_id(int64_t leading_digits, int repeats);
+int64_t add_pt2_invalid_ids(Range r, int repeats);
+int64_t add_pt2_invalid_ids(Range r);
 
 }  // namespace aoc
 

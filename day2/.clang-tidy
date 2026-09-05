@@ -1,6 +1,7 @@
 Checks: >
     cppcoreguidelines-*,
-    google-*
+    google-*,
+    -google-readability-todo
 
 HeaderFilterRegex: .
 
