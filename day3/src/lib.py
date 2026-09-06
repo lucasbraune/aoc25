@@ -1,19 +1,31 @@
+from pathlib import Path
+
+INPUT = Path(__file__).resolve().parent.parent / "resources" / "input.txt"
+
+
+def read_input() -> str:
+    return INPUT.read_text()
+
+
 def argmax(nums: list[int], *, start: int = 0, end: int | None = None) -> int:
-    if not nums:
-        raise ValueError("Argmax requires a non-empty array")
-    if end == None:
+    if end is None:
         end = len(nums)
-    argmax = start
+    if not 0 <= start < end <= len(nums):
+        raise ValueError(
+            f"Argmax requires a non-empty range within the array: "
+            f"start={start} end={end} len={len(nums)}"
+        )
+    best = start
     for k in range(start + 1, end):
-        if nums[k] > nums[argmax]:
-            argmax = k
-    return argmax
+        if nums[k] > nums[best]:
+            best = k
+    return best
 
 
-def make_decimal(nums: list[int]) -> int:
+def make_decimal(digits: list[int]) -> int:
     res = 0
-    for i in range(len(nums)):
-        res += nums[i] * 10 ** (len(nums) - i - 1)
+    for d in digits:
+        res = res * 10 + d
     return res
 
 
@@ -24,9 +36,9 @@ def joltage(bank: str, *, batteries: int) -> int:
         raise ValueError(
             f"Bank is too small: bank_size={len(bank)} batteries={batteries}"
         )
-    nums = [int(c) for c in bank]
     if batteries == 0:
         return 0
+    nums = [int(c) for c in bank]
     start = 0
     positions = []
     for remaining in range(batteries, 0, -1):

@@ -24,8 +24,8 @@ def test_total_output_with_12_batteries():
     234234234234278
     818181911112111
     """
-    print(banks)
     assert lib.total_output(banks, batteries=12) == 3121910778619
+
 
 def test_solve():
     assert part2.solve() == 172886048065379
