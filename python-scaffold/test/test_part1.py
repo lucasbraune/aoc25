@@ -1,2 +1,8 @@
+import pytest
+
+import part1
+
+
+@pytest.mark.skip(reason="Answer unknown")
 def test_solve():
-    assert 1 + 1 == 2
+    assert part1.solve() == -1

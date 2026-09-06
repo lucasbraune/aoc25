@@ -1,4 +1,8 @@
+import lib
+
+
 def solve() -> int:
+    print(lib.read_input())
     return -1
 
 
