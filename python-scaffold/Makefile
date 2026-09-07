@@ -5,7 +5,7 @@ DEPS = $(VENV)/.deps
 CODE = src test
 CACHES = .pytest_cache .ruff_cache
 
-.PHONY: test part1 part2 lint format clean distclean
+.PHONY: test part1 part2 check fix format clean
 
 test: $(DEPS)
 	$(PYTHON) -m pytest
@@ -16,19 +16,21 @@ part1: $(PYTHON)
 part2: $(PYTHON)
 	$(PYTHON) src/part2.py
 
-lint: $(DEPS)
-	$(PYTHON) -m ruff check
+check: $(DEPS)
+	@fail=0; \
+	$(PYTHON) -m ruff check || fail=1; \
+	$(VENV)/bin/pyright || fail=1; \
+	exit $$fail
+
+fix: $(DEPS)
+	$(PYTHON) -m ruff check --fix
 
 format: $(DEPS)
 	$(PYTHON) -m ruff format
 
-# Caches and bytecode. Keeps the venv, so the next build is fast.
 clean:
 	rm -rf $(CACHES)
 	find $(CODE) -type d -name __pycache__ -prune -exec rm -rf {} +
-
-# Everything clean does, plus the venv. Next `make` reinstalls from scratch.
-distclean: clean
 	rm -rf $(VENV)
 
 # The venv itself.

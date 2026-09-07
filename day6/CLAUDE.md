@@ -9,3 +9,5 @@ Answer questions, but don't solve problems unless I ask.
 
 This project uses `pip` + `venv` + `make`. Do not use `uv`.
 If you run `uv` by mistake, delete `uv.lock` and similar files.
+
+For type checking, this project uses `pyright` and not `mypy`.

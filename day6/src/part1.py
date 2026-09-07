@@ -3,20 +3,17 @@ from lib import Problem
 
 
 def parse_problems(s: str) -> list[Problem]:
-    lines = s.splitlines()
-    operands = [[int(x) for x in line.split()] for line in lines[:-1]]
-    operators: list[lib.Operator] = [
-        lib.ensure_operator(op) for op in lines[-1].split()
-    ]
+    grid = [line.split() for line in s.splitlines()]
+    # Transposing puts one whole problem on each row: operands, then operator.
+    grid_transpose = zip(*grid, strict=True)
     return [
-        Problem([operand[problem] for operand in operands], operators[problem])
-        for problem in range(len(operators))
+        Problem([int(x) for x in operands], lib.ensure_operator(operator))
+        for *operands, operator in grid_transpose
     ]
 
 
 def solve() -> int:
-    s = lib.read_input()
-    return lib.grand_total(parse_problems(s))
+    return lib.grand_total(parse_problems(lib.read_input()))
 
 
 if __name__ == "__main__":

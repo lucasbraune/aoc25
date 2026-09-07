@@ -1,5 +1,5 @@
 [project]
-name = "day3"
+name = "dayX"
 version = "0.1.0"
 description = "Advent of Code 2025, day X"
 authors = [{ name = "Lucas Braune", email = "lucasbraune@gmail.com" }]
@@ -7,10 +7,15 @@ requires-python = ">=3.14"
 dependencies = []
 
 [dependency-groups]
-dev = ["pytest==9.1.1", "ruff==0.16.6"]
+dev = ["pytest==9.1.1", "ruff==0.16.6", "pyright==1.1.411"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B", "SIM"]
+select = ["E", "F", "I", "UP", "B", "SIM", "A", "C4", "PT", "RUF"]
+
+# Pyright's own default is "standard"; setting it here pins the project to it
+# for VS Code too, instead of whatever the user's Pylance setting happens to be.
+[tool.pyright]
+typeCheckingMode = "standard"
