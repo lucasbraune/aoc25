@@ -1,14 +1,6 @@
 import lib
 
 
-def parse_diagram(diagram_str: str) -> list[list[str]]:
-    return [list(line) for line in diagram_str.splitlines()]
-
-
-def render_diagram(diagram: list[list[str]]) -> str:
-    return "\n".join("".join(row) for row in diagram)
-
-
 def evolve(diagram: list[list[str]]) -> None:
     rows = len(diagram)
     cols = len(diagram[0])
@@ -25,7 +17,7 @@ def evolve(diagram: list[list[str]]) -> None:
 
 
 def count_splits(diagram_str: str) -> int:
-    diagram = parse_diagram(diagram_str)
+    diagram = lib.parse_diagram(diagram_str)
     rows = len(diagram)
     cols = len(diagram[0])
     evolve(diagram)
